@@ -2,10 +2,13 @@
 import { Image } from "astro:assets";
 import headshot from "../assets/headshot.jpg";
 import Layout from "../components/Layout.astro";
+
+import SiteHeader from "../components/SiteHeader.astro";
 ---
 
 <Layout title="+Damilola Osunsanwo">
   <main>
+    <SiteHeader />
     <div class="grid place-items-center h-[100dvh] p-4">
       <section class="flex flex-col gap-7 max-w-[50rem]">
         <Image
