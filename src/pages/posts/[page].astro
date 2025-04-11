@@ -1,0 +1,9 @@
+---
+const { slug } = Astro.params;
+import Layout from "../../components/Layout.astro";
+---
+
+<Layout title="Post: {slug}">
+  <h1>Post: {slug}</h1>
+  <p>This is the post content for {slug}.</p>
+</Layout>

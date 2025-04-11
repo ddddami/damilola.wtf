@@ -1,0 +1,11 @@
+[
+	{
+		"name": "gitignore",
+		"description": "Go library for runtime type generation (existing and non-existing/dynamic types)",
+		"website_url": null,
+		"github_url": "https://github.com/ddddami/gitignore",
+		"image": "",
+		"status": "active",
+		"tags": ["go"]
+	}
+]
