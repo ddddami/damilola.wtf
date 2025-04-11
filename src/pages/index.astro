@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
+import SimpleArticleListItem from "../components/items/SimpleArticleListItem.astro";
 import H2 from "../components/mdx/H2.astro";
 import { getCollection } from "astro:content";
 
@@ -33,7 +34,7 @@ const projects: Project[] =
       <H2 class="text-3xl">Latest posts</H2>
 
       <div class="mt-5 space-y-5">
-        {posts.map((post) => post.data.title)}
+        {posts.map((post) => <SimpleArticleListItem {post} />)}
       </div>
     </section>
 
