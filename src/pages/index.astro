@@ -1,92 +1,24 @@
 ---
-import { Image } from "astro:assets";
-import headshot from "../assets/headshot.jpg";
 import Layout from "../components/Layout.astro";
 
 import SiteHeader from "../components/SiteHeader.astro";
 ---
 
-<Layout title="+Damilola Osunsanwo">
-  <main>
+<Layout title="Damilola Osunsanwo">
+  <main class="container">
     <SiteHeader />
-    <div class="grid place-items-center h-[100dvh] p-4">
-      <section class="flex flex-col gap-7 max-w-[50rem]">
-        <Image
-          width={112}
-          height={112}
-          class="rounded-full bg-neutral-100 p-3 h-28 w-28 object-cover"
-          src={headshot}
-          alt="headshot."
-        />
-        <h1 class="text-4xl md:text-3xl text-black font-medium">
-          Hiya, I'm Damilola. 👋
-        </h1>
-        <p
-          class="content text-xl md:text-3xl text-neutral-500 font-medium leading-8 lg:leading-10 tracking-tight md:tracking-tighter"
-        >
-          I'm a software developer and a software engineering student. I enjoy
-          reading computer related stuff and constantly learning new things.
-          <br />
-          <br />
-          Be curious. read widely. try new things. -- aaronsw
-        </p>
-        <div class="flex gap-3 mt-2">
-          <a target="_blank" href="https://github.com/ddddami"
-            ><svg
-              class="text-neutral-700"
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
-              ></path></svg
-            ></a
-          >
-          <a target="_blank" href="https://x.com/@_ddddami"
-            ><svg
-              class="text-neutral-700"
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path
-                d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg
-            ></a
-          >
-          <a target="_blank" href="mailto:hey@damilola.wtf"
-            ><svg
-              class="text-neutral-700"
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-mail"
-              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
-              ></path><path d="M3 7l9 6l9 -6"></path></svg
-            ></a
-          >
-        </div>
-      </section>
-    </div>
+
+    <section id="about">
+      <p>
+        Hey there! I&apos;m Damilola – a software developer and sophomore
+        software engineering student, a sucker for software that
+        _just&nbsp;works_ and is beautifully simple. I constantly build and
+        break things (a lot), always learning and expanding my skills so I can
+        create seamless, high-performing software that feels intuitive and
+        reliable – the kind of software I believe people should experience and
+        that I&apos;d love to use.
+      </p>
+    </section>
+    <!-- {latest posts} -->
   </main>
 </Layout>
