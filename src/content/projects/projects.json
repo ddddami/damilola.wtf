@@ -4,7 +4,7 @@
 		"description": "Go library for runtime type generation (existing and non-existing/dynamic types)",
 		"website_url": null,
 		"github_url": "https://github.com/ddddami/gitignore",
-		"image": "",
+		"image": "/test.jpg",
 		"status": "active",
 		"tags": ["go"]
 	}

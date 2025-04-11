@@ -1,10 +1,15 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
+import H2 from "../components/mdx/H2.astro";
 import { getCollection } from "astro:content";
 
+type Project = CollectionEntry<"projects">["data"][number];
 const PAGE_SIZE = 6;
 const posts = (await getCollection("blog")).slice(0, PAGE_SIZE);
+const projects: Project[] =
+  (await getCollection("projects"))?.[0]?.data.slice(0, PAGE_SIZE) ?? [];
 ---
 
 <Layout title="Damilola Osunsanwo">
@@ -22,12 +27,23 @@ const posts = (await getCollection("blog")).slice(0, PAGE_SIZE);
         that I&apos;d love to use.
       </p>
     </section>
+
     <!-- {latest posts} -->
-    <section id="latest-posts">
-      <h2 class="mt-6 text-3xl">Latest posts</h2>
+    <section class="mt-6" id="latest-posts">
+      <H2 class="text-3xl">Latest posts</H2>
 
       <div class="mt-5 space-y-5">
         {posts.map((post) => post.data.title)}
+      </div>
+    </section>
+
+    <hr class="my-12" />
+
+    <section id="projects">
+      <H2>Featured projects</H2>
+
+      <div class="mt-5 space-y-5">
+        {projects.map((project) => project.name)}
       </div>
     </section>
   </main>
