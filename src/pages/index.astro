@@ -3,10 +3,11 @@ import type { CollectionEntry } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SimpleArticleListItem from "../components/items/SimpleArticleListItem.astro";
+import SimpleProjectListItem from "../components/items/SimpleProjectListItem.astro";
 import H2 from "../components/mdx/H2.astro";
 import { getCollection } from "astro:content";
 
-type Project = CollectionEntry<"projects">["data"][number];
+export type Project = CollectionEntry<"projects">["data"][number];
 const PAGE_SIZE = 6;
 const posts = (await getCollection("blog")).slice(0, PAGE_SIZE);
 const projects: Project[] =
@@ -44,7 +45,7 @@ const projects: Project[] =
       <H2>Featured projects</H2>
 
       <div class="mt-5 space-y-5">
-        {projects.map((project) => project.name)}
+        {projects.map((project) => <SimpleProjectListItem {project} />)}
       </div>
     </section>
   </main>
