@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import Layout from "~layouts/Layout.astro";
+import SiteHeader from "../components/layout/SiteHeader.astro";
+
+import php from "~icons/php.svg";
+import typescript from "~icons/typescript.svg";
+import go from "~icons/go.svg";
+import python from "~icons/python.svg";
+
+type Tool = {
+  name: string;
+  description: string;
+  logo: ImageMetadata;
+  color: string;
+};
+
+const tools: Tool[] = [
+  {
+    name: "PHP",
+    description:
+      "A popular general-purpose scripting language that is especially suited to web development.",
+    logo: php,
+    color: "#4F5B93",
+  },
+  {
+    name: "Typescript",
+    description:
+      "A superset of JavaScript that compiles to clean JavaScript output.",
+    logo: typescript,
+    color: "#007ACC",
+  },
+  {
+    name: "Go",
+    description:
+      "An open source programming language that makes it easy to build simple, reliable, and efficient software.",
+    logo: go,
+    color: "#00ADD8",
+  },
+  {
+    name: "Python",
+    description:
+      "A programming language that lets you work quickly and integrate systems more effectively.",
+    logo: python,
+    color: "#3776AB",
+  },
+];
+---
+
+<Layout title="Tools">
+  <main class="container">
+    <SiteHeader />
+    <h2 class="text-3xl mb-5 mt-2">Tools</h2>
+    <p class="mb-8">
+      I primarily use PHP, typescript, go and python for most of my projects.
+      Sometimes I dabble in other things/tools for whatnot, out of curiosity,
+      interest and sometimes, money :)
+    </p>
+    <section id="tools">
+      <div class="mt-5 space-y-5">
+        <ul class="grid grid-cols-1 gap-4">
+          {
+            tools.map((tool) => (
+              <li>
+                <div class="flex items-center py-4 px-0.5 bg-white ">
+                  <div
+                    class="p-1 mr-3 aspect-square object-cover rounded w-10 h-10"
+                    style={{ backgroundColor: tool.color }}
+                  >
+                    <Image
+                      src={tool.logo}
+                      alt={tool.name}
+                      class="w-10 h-10 aspect-square"
+                    />
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold">{tool.name}</h3>
+                    <p class="text-gray-600">{tool.description}</p>
+                  </div>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+  </main>
+</Layout>
