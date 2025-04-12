@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "../layouts/Layout.astro";
+import SiteHeader from "../components/layout/SiteHeader.astro";
+import SimpleArticleListItem from "../components/items/SimpleArticleListItem.astro";
+
+const posts = (
+  await getCollection("blog", ({ data }) =>
+    import.meta.env.PROD ? !data.draft : true,
+  )
+).sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
+---
+
+<Layout title="Blog">
+  <main class="container">
+    <SiteHeader />
+    <h2 class="text-3xl mb-5 mt-2">Blog</h2>
+
+    <p class="mb-8">
+      I intend to write about things that interest me, tech stuff, sometimes
+      maybe not. I might not always know what I'm talking about, but I do hope
+      you enjoy reading anyway. You can subscribe to the <a href="/rss.xml"
+        >RSS Feed</a
+      > or the <a href="/feed.json">JSON Feed</a> to get new posts in your reader.
+    </p>
+
+    <!--  Articles -->
+
+    <div class="mt-4 space-y-20">
+      <!-- build articlepreview component -->
+      {posts.map((post) => <SimpleArticleListItem {post} />)}
+    </div>
+  </main>
+</Layout>
