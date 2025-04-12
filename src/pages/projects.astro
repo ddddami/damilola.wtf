@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import SiteHeader from "../components/layout/SiteHeader.astro";
+import SimpleProjectListItem from "../components/items/SimpleProjectListItem.astro";
+import type { Project } from "./index.astro";
+
+const projects: Project[] = (await getCollection("projects"))?.[0]?.data ?? [];
+---
+
+<Layout title="Projects">
+  <main class="container">
+    <SiteHeader />
+    <h2 class="text-3xl mb-5 mt-2">Projects</h2>
+    <p class="mb-8">
+      I from time to time work on side projects - sometimes to learn something
+      new, sometimes to sharpen my skills, occassionally to scratch my own itch.
+      I enjoy working experimenting with different tools/languages especially
+      when it helps me learn something new and see things from a new
+      perspective. I have selected some of my projects here, you can find more
+      in the archive on my <a
+        class="underline"
+        href="https://github.com/dddami"
+        target="_blank">Github</a
+      >.
+    </p>
+    <section id="projects">
+      <div class="mt-5 space-y-5">
+        {projects.map((project) => <SimpleProjectListItem {project} />)}
+      </div>
+    </section>
+  </main>
+</Layout>
