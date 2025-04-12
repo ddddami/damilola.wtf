@@ -1,11 +1,11 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-import SiteHeader from "../components/SiteHeader.astro";
+import SiteHeader from "../components/layout/SiteHeader.astro";
 import SimpleArticleListItem from "../components/items/SimpleArticleListItem.astro";
 import SimpleProjectListItem from "../components/items/SimpleProjectListItem.astro";
 import H2 from "../components/mdx/H2.astro";
-import { getCollection } from "astro:content";
 
 export type Project = CollectionEntry<"projects">["data"][number];
 const PAGE_SIZE = 6;
@@ -26,7 +26,7 @@ const projects: Project[] =
         break things (a lot), always learning and expanding my skills so I can
         create seamless, high-performing software that feels intuitive and
         reliable – the kind of software I believe people should experience and
-        that I&apos;d love to use.
+        that I want to use.
       </p>
     </section>
 
