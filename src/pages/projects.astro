@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-import SiteHeader from "../components/layout/SiteHeader.astro";
+import ProfileCard from "../components/layout/ProfileCard.astro";
 import SimpleProjectListItem from "../components/items/SimpleProjectListItem.astro";
 import type { Project } from "./index.astro";
 
@@ -10,7 +10,7 @@ const projects: Project[] = (await getCollection("projects"))?.[0]?.data ?? [];
 
 <Layout title="Projects">
   <main class="container">
-    <SiteHeader />
+    <ProfileCard />
     <h2 class="text-3xl mb-5 mt-2">Projects</h2>
     <p class="mb-8">
       I from time to time work on side projects - sometimes to learn something

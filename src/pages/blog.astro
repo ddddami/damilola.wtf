@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 
 import Layout from "../layouts/Layout.astro";
-import SiteHeader from "../components/layout/SiteHeader.astro";
+import ProfileCard from "../components/layout/ProfileCard.astro";
 import SimpleArticleListItem from "../components/items/SimpleArticleListItem.astro";
 
 const posts = (
@@ -14,7 +14,7 @@ const posts = (
 
 <Layout title="Blog">
   <main class="container">
-    <SiteHeader />
+    <ProfileCard />
     <h2 class="text-3xl mb-5 mt-2">Blog</h2>
 
     <p class="mb-8">
