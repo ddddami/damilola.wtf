@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 import Layout from "~layouts/Layout.astro";
 import ProfileCard from "~components/layout/ProfileCard.astro";
+import H2 from "~components/mdx/H2.astro";
 
 import php from "~icons/php.svg";
 import typescript from "~icons/typescript.svg";
@@ -92,7 +93,7 @@ const tools: Tool[] = [
 <Layout title="Tools">
   <main class="container">
     <ProfileCard />
-    <h2 class="text-3xl mb-5 mt-2">Tools</h2>
+    <h2 class="text-3xl mb-8 mt-2">Tools</h2>
 
     <p class="mb-8">
       I primarily use PHP, TypeScript, Go, and Python for most of my projects.
@@ -101,7 +102,7 @@ const tools: Tool[] = [
       Below are some of the tools I feel comfortable with, along with general experience
       and some things I really want to try.
     </p>
-    <section id="tools">
+    <section class="mb-8" id="tools">
       <div class="mt-5 space-y-5">
         <ul class="grid grid-cols-1 gap-4">
           {
@@ -109,7 +110,7 @@ const tools: Tool[] = [
               <li>
                 <div class="flex items-start py-4 px-0.5 ">
                   <div
-                    class="p-1.5 mr-4 mt-4 aspect-square object-cover rounded w-10 h-10 flex items-center justify-center r"
+                    class="p-1.5 mr-4 mt-4 aspect-square object-cover rounded w-10 h-10 flex items-center justify-center"
                     style={{ backgroundColor: tool.color }}
                   >
                     <Image
@@ -129,5 +130,118 @@ const tools: Tool[] = [
         </ul>
       </div>
     </section>
+    <section class="mb-8">
+      <H2>Things I&apos;m excited for</H2>
+
+      <!-- I don't know why prettier-ignore is cutting off my text, but the white space (line-breaks) are visible in browsers and prettier thankfully incosistently adds whitespace to the list items -->
+      <ul class="list-disc list-inside mt-5 space-y-3">
+        <li>
+          <a target="_blank" href="https://rust-lang.org/">Rust</a> - A blazingly
+          fast and memory-efficient systems programming languge for performance-critcal
+          systems that I definitely want to use
+        </li>
+        <li>
+          <a target="_blank" href="https://www.java.com/en/">Java</a> - A classic
+          programming language and a key foundation for me in building mordern Android
+          apps (with Kotlin)
+        </li>
+        <li>
+          <a target="_blank" href="https://www.swift.org/">Swift</a> - Clean, fast
+          for native iOS/macOS applications
+        </li>
+
+        <li>
+          <a target="_blank" href="https://www.solidjs.com/">Solid.js</a> - I use
+          react a lot, but I like Solid.js's approach to reactiviy, and it's more
+          perfomant
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <H2>Other things I&apos;ve used</H2>
+      <ul class="list-disc list-inside mt-5 space-y-3">
+        <li>
+          <b>Laravel</b> - welps.. I have had to painfully write Laravel before.
+          It is that tool I never want to work with, but I painfully have to
+        </li>
+        <li>
+          <b>Vue.js</b> - Vue.js is really nice and simle, but after writing a lot
+          of it, I do not know, but it's just not it for me.
+        </li>
+        <li>
+          <b>MongoDB</b> - I have used this for a bit and I&apos;ll probably still
+          have to use it for future projects.
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <H2>CLI tools</H2>
+      <ul class="list-disc list-inside mt-5 space-y-3">
+        <li>
+          <a target="_blank" href="https://github.com/tmux/tmux/">tmux</a> - since
+          I spend a lot of time in my terminal, I use tmux for a lot of terminal
+          multilexing stuff. I sometimes use <a href="https://zellij.dev/"
+            >zellij</a
+          > too
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/jesseduffield/lazygit"
+            >lazygit</a
+          > - For a seamless git workflow in my terminal
+          <ul class="list-disc list-inside ml-6 space-y-1.5">
+            <li>
+              <a target="_blank" href="https://github.com/dandavison/delta"
+                >git-delta</a
+              > - for nicer git diffs in lazygit
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/nvm-sh/nvm">nvm</a> - so I
+          can manage mutiple versions of node
+        </li>
+
+        <li>
+          <a target="_blank" href="https://github.com/antfu-collective/ni">ni</a
+          > - so I don’t have to care whether I’m in a npm / yarn / pnpm / bun project
+        </li>
+
+        <li>
+          <a target="_blank" href="https://www.zsh.org/">zsh</a> - this is my preferred
+          shell
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/junegunn/fzf">fzf</a> - as
+          my fuzzy finder
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/sharkdp/bat">bat</a> - a better
+          cat
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/ajeetdsouza/zoxide"
+            >zoxide</a
+          > - a better way to cd
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/yorukot/superfile"
+            >superfile</a
+          >
+          - a nice file explorer in my terminal
+        </li>
+        <li>
+          <a target="_blank" href="https://posting.sh">posting</a> - I occassionaly
+          use this to quickly test APIs in my terminal
+        </li>
+      </ul>
+    </section>
   </main>
 </Layout>
+
+<style scoped>
+  a {
+    @apply underline underline-offset-2;
+  }
+</style>
