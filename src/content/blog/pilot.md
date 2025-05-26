@@ -1,6 +1,6 @@
 ---
 title: Just start
-tags: []
+tags: ["rant"]
 date: 2025-05-05
 description: Test..
 keywords: rant
