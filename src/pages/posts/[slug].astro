@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+let { post } = Astro.props;
+
+if (!post) {
+  return new Response(null, {
+    status: 404,
+    statusText: "Not Found",
+  });
+}
+
+let {
+  data: { title, date },
+} = post;
+const { Content } = await post.render();
+---
+
+<Layout {title}>
+  <div class="w-fit max-w-full flex items-start gap-2 mt-6 mx-auto">
+    <main class="container">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight tracking-normal">
+        {title}
+      </h1>
+
+      <p>
+        Published on <b>{date.toLocaleString("en-GB", { dateStyle: "long" })}</b
+        >
+      </p>
+
+      <article class="blog-content">
+        <Content />
+      </article>
+    </main>
+  </div>
+</Layout>

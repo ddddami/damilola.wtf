@@ -1,9 +1,9 @@
 ---
 title: Just start
 tags: []
-date: 2020-01-01
+date: 2025-05-05
 description: Test..
 keywords: rant
 ---
 
-post....
+Hey there, frenn. I am still working on this blog post... :/

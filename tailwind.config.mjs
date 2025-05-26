@@ -12,6 +12,9 @@ export default {
           // "2xl": "768px",
         },
       },
+      fontSize: {
+        base: "1.1rem",
+      },
       colors: {
         primary: {
           DEFAULT: "#FF0000",
@@ -21,5 +24,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

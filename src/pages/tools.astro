@@ -47,7 +47,7 @@ const tools: Tool[] = [
   {
     name: "Python",
     description:
-      "My very first language, - clean, elegant, great for occassional scripting and building dynamic web apps quickly. I don&apos;t use it everyday anymore, but when I do, it feels like home.",
+      "My very first language, - clean, elegant, great for occassional scripting and building dynamic web apps quickly. I don't use it everyday anymore, but when I do, it feels like home.",
     logo: python,
     color: "#CBC3C33B",
   },
@@ -93,7 +93,7 @@ const tools: Tool[] = [
 <Layout title="Tools">
   <main class="container">
     <ProfileCard />
-    <h2 class="text-3xl mb-8 mt-2">Tools</h2>
+    <h2 class="text-3xl mb-5 mt-2">Tools</h2>
 
     <p class="mb-8">
       I primarily use PHP, TypeScript, Go, and Python for most of my projects.
@@ -121,7 +121,9 @@ const tools: Tool[] = [
                   </div>
                   <div>
                     <h3 class="text-lg mb-1.5 font-semibold">{tool.name}</h3>
-                    <p class="text-gray-600">{tool.description}</p>
+                    <p class="text-gray-800 text-opacity-80">
+                      {tool.description}
+                    </p>
                   </div>
                 </div>
               </li>
