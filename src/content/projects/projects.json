@@ -1,11 +1,49 @@
 [
-	{
-		"name": "gitignore",
-		"description": "Go library for runtime type generation (existing and non-existing/dynamic types)",
-		"website_url": null,
-		"github_url": "https://github.com/ddddami/gitignore",
-		"image": "/test.jpg",
-		"status": "active",
-		"tags": ["go"]
-	}
+  {
+    "name": "game hub",
+    "description": "A beautiful website to discover video games",
+    "website_url": "https://gamehub-dd.vercel.app",
+    "github_url": "https://github.com/ddddami/game-hub",
+    "image": "/game-hub.jpg",
+    "status": "wip",
+    "tags": ["typescript", "react", "nextjs"]
+  },
+
+  {
+    "name": "git swift",
+    "description": "A tiny cli tool to quickly jump & navigate between git branches",
+    "website_url": null,
+    "github_url": "https://github.com/ddddami/git-swift",
+    "image": "/test.jpg",
+    "status": "active",
+    "tags": ["go"]
+  },
+  {
+    "name": "bindle",
+    "description": "A lightweight utility library for faster, cleaner web development with go",
+    "website_url": null,
+    "github_url": "https://github.com/ddddami/bindle",
+    "image": "/game-hub.jpg",
+    "status": "active",
+    "tags": ["go"]
+  },
+  {
+    "name": "taems",
+    "description": "A one-stop all-in-one solution for everything high-school management related",
+    "website_url": null,
+    "github_url": "https://github.com/ddddami/taems",
+    "image": "/game-hub.jpg",
+    "status": "active",
+    "tags": ["python", "typescript", "react", "nextjs"]
+  },
+
+  {
+    "name": "gitignore",
+    "description": "A cli tool to generate .gitignore templates written in go",
+    "website_url": null,
+    "github_url": "https://github.com/ddddami/gitignore",
+    "image": "/test.jpg",
+    "status": "active",
+    "tags": ["go"]
+  }
 ]
