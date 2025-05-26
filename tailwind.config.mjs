@@ -13,7 +13,8 @@ export default {
         },
       },
       fontSize: {
-        base: "1.1rem",
+        base: ["1rem", { lineHeight: "1.5" }],
+        lgbase: ["1.1rem", { lineHeight: "1.6" }],
       },
       colors: {
         primary: {
