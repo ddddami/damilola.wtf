@@ -13,23 +13,37 @@ import { Icon } from "astro-icon/components";
   <div class="space-y-1.5 lg:space-y-2.5">
     <h1 class="mb-1 text-3xl lg:text-4xl font-bold">Damilola</h1>
     <a
-      class="text-sm inline-block no-underline"
+      class="link hover:text-body text-sm inline-block no-underline"
       href="mailto:hey@damilola.wtf">hey@damilola.wtf</a
     >
     <div class="flex gap-3">
-      <a href="https://github.com/ddddami" title="GitHub" target="_blank">
+      <a
+        class="link hover:text-body"
+        href="https://github.com/ddddami"
+        title="GitHub"
+        target="_blank"
+      >
         <Icon size={19} name="tabler:brand-github" />
       </a>
 
-      <a href="https://x.com/ddddami_" title="Twitter" target="_blank">
+      <a
+        class="link hover:text-body"
+        href="https://x.com/ddddami_"
+        title="Twitter"
+        target="_blank"
+      >
         <Icon size={19} name="tabler:brand-twitter" />
       </a>
 
-      <a href="/rss.xml" title="RSS Feed">
+      <a class="link hover:text-body" href="/rss.xml" title="RSS Feed">
         <Icon size={19} name="tabler:rss" />
       </a>
 
-      <a href="/feed.json" title="JSON Feed" class="text-2xl -mt-0.5">
+      <a
+        href="/feed.json"
+        title="JSON Feed"
+        class="link hover:text-body text-2xl -mt-0.5"
+      >
         <Icon name="tabler:json" />
       </a>
     </div>

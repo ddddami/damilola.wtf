@@ -1,6 +1,6 @@
 [
   {
-    "name": "game hub",
+    "name": "Game Hub",
     "description": "A beautiful website to discover video games",
     "website_url": "https://gamehub-dd.vercel.app",
     "github_url": "https://github.com/ddddami/game-hub",
@@ -10,7 +10,7 @@
   },
 
   {
-    "name": "git swift",
+    "name": "Git Swift",
     "description": "A tiny cli tool to quickly jump & navigate between git branches",
     "website_url": null,
     "github_url": "https://github.com/ddddami/git-swift",
@@ -19,7 +19,7 @@
     "tags": ["go"]
   },
   {
-    "name": "bindle",
+    "name": "Bindle",
     "description": "A lightweight utility library for faster, cleaner web development with go",
     "website_url": null,
     "github_url": "https://github.com/ddddami/bindle",
@@ -28,7 +28,7 @@
     "tags": ["go"]
   },
   {
-    "name": "taems",
+    "name": "TAEMS",
     "description": "A one-stop all-in-one solution for everything high-school management related",
     "website_url": null,
     "github_url": "https://github.com/ddddami/taems",
@@ -38,7 +38,7 @@
   },
 
   {
-    "name": "gitignore",
+    "name": "Gitignore",
     "description": "A cli tool to generate .gitignore templates written in go",
     "website_url": null,
     "github_url": "https://github.com/ddddami/gitignore",

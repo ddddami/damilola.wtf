@@ -6,12 +6,47 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-primary: 253 249 239;
+    /* #fdf9ef */
+    --color-secondary: 255 255 255;
+    /* #ffffff */
+    --color-muted: 102 102 102;
+    /* #666666 */
+    --color-accent: 228 175 93;
+    /* #e4af5d */
+    --color-heading: 18 18 18;
+    /* #121212 */
+    --color-body: 18 18 18;
+    /* #121212 */
+    --color-border: 229 229 229;
+    /* #e5e5e5 */
+  }
+
+  .dark {
+    --color-primary: 18 18 18;
+    /* #121212 */
+    --color-secondary: 26 26 26;
+    /* #1a1a1a */
+    --color-muted: 160 160 160;
+    /* #a0a0a0 */
+    --color-accent: 228 175 93;
+    /* #e4af5d */
+    --color-heading: 235 235 235;
+    /* #ebebeb */
+    --color-body: 224 224 224;
+    /* #e0e0e0 */
+    --color-border: 42 42 42;
+    /* #2a2a2a */
+  }
+
   html {
     font-family: "Source Code Pro", "Helvetica Neue", monospace;
+    @apply bg-primary text-body;
   }
 
   body {
-    @apply text-base leading-loose text-black;
+    @apply text-base leading-loose bg-primary text-body transition-colors duration-200;
   }
 
   h1,
@@ -21,7 +56,7 @@
   h5,
   h6 {
     font-family: "JetBrains Mono", monospace;
-    @apply font-semibold leading-tight mb-1;
+    @apply text-heading font-semibold;
   }
 
   p {
@@ -35,8 +70,55 @@
   pre {
     @apply bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto;
   }
+
+  ::selection {
+    background-color: theme("colors.accent.DEFAULT");
+    color: #121212;
+  }
+
+  [x-cloak] {
+    display: none !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: theme("colors.heading");
+  }
+
+  p {
+    color: theme("colors.body");
+  }
+
+  hr {
+    @apply border-t border-border my-8;
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+
+    nav &,
+    [no-underline] & {
+      text-decoration: none;
+    }
+
+    &:hover {
+      /* color: theme("colors.white"); */
+    }
+  }
 }
 
-[x-cloak] {
-  display: none !important;
+@layer utilities {
+  .text-body-lighter {
+    @apply text-body/75 dark:text-body/80;
+  }
+
+  .link {
+    @apply text-body/80 hover:text-muted transition-colors duration-200;
+  }
 }

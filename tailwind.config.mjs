@@ -9,7 +9,7 @@ export default {
         padding: "1.3rem",
         screens: {
           sm: "100%",
-          md: "720px",
+          md: "800px",
           // "2xl": "768px",
         },
       },
@@ -17,11 +17,27 @@ export default {
         base: ["1rem", { lineHeight: "1.5" }],
         lgbase: ["1.1rem", { lineHeight: "1.6" }],
       },
+
       colors: {
-        primary: {
-          DEFAULT: "#FF0000",
-          light: "",
-          dark: "#FFC2C2",
+        primary: "rgb(var(--color-primary) / <alpha-value>)",
+        secondary: "rgb(var(--color-secondary) / <alpha-value>)",
+        muted: "rgb(var(--color-muted) / <alpha-value>)",
+        heading: "rgb(var(--color-heading) / <alpha-value>)",
+        body: "rgb(var(--color-body) / <alpha-value>)",
+        border: "rgb(var(--color-border) / <alpha-value>)",
+
+        accent: {
+          DEFAULT: "rgb(var(--color-accent) / <alpha-value>)",
+          50: "#fef7e7",
+          100: "#fdecc4",
+          200: "#fbd485",
+          300: "#f9bc46",
+          400: "#e4af5d",
+          500: "#d4961a",
+          600: "#b8820f",
+          700: "#996b0f",
+          800: "#7c5613",
+          900: "#674713",
         },
       },
     },

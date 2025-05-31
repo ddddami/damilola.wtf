@@ -1,14 +1,17 @@
 ---
-import { Icon } from "astro-icon/components";
 import ThemeSwitcher from "~components/items/ThemeSwitcher.astro";
 ---
 
 <nav class="max-w-screen w-full">
   <div
-    class="md:container lg:container mx-auto flex items-center justify-between space-x-5 py-4 px-8"
+    class="md:container lg:container mx-auto flex items-center justify-between space-x-5 py-4 px-6"
   >
     <a href="/">
-      <Icon name="tabler:terminal" size="24" class="aspect-square block" />
+      <img
+        src="/favicon.ico"
+        alt="Logo"
+        class="h-6 aspect-square rounded-md md:block"
+      />
     </a>
 
     <div class="flex items-center text-base gap-4 md:gap-5 flex-wrap">
