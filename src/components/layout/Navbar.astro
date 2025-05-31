@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import ThemeSwitcher from "~components/items/ThemeSwitcher.astro";
 ---
 
 <nav class="max-w-screen w-full">
@@ -10,12 +11,11 @@ import { Icon } from "astro-icon/components";
       <Icon name="tabler:terminal" size="24" class="aspect-square block" />
     </a>
 
-    <div
-      class="flex items-center text-sm md:text-base gap-5 md:gap-6 flex-wrap"
-    >
-      <a href="/blog">blog</a>
-      <a href="/projects">projects</a>
-      <a href="/tools">tools</a>
+    <div class="flex items-center text-base gap-4 md:gap-5 flex-wrap">
+      <a class="py-0.5" href="/blog">blog</a>
+      <a class="py-0.5" href="/projects">projects</a>
+      <a class="py-0.5" href="/tools">tools</a>
+      <ThemeSwitcher />
     </div>
   </div>
 </nav>

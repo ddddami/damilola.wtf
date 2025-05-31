@@ -36,3 +36,7 @@
     @apply bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto;
   }
 }
+
+[x-cloak] {
+  display: none !important;
+}

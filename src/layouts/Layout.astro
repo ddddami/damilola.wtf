@@ -52,6 +52,15 @@ if (!keywords)
       ) : null
     }
     <title>{title}</title>
+
+    <script is:inline>
+      const savedTheme = localStorage.getItem("theme");
+      const systemDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      const isDark = savedTheme === "dark" || (!savedTheme && systemDark);
+      document.documentElement.classList.toggle("dark", isDark);
+    </script>
   </head>
   <body>
     <Navbar />

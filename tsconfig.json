@@ -1,15 +1,16 @@
 {
-	"extends": "astro/tsconfigs/strict",
-	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"~/*": ["src/*"],
-			"~components/*": ["src/components/*"],
-			"~layouts/*": ["src/layouts/*"],
-			"~pages/*": ["src/pages/*"],
-			"~public/*": ["public/*"],
-			"~styles/*": ["src/styles/*"],
-			"~icons/*": ["src/icons/*"]
-		}
-	}
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"],
+      "~components/*": ["src/components/*"],
+      "~layouts/*": ["src/layouts/*"],
+      "~pages/*": ["src/pages/*"],
+      "~public/*": ["public/*"],
+      "~styles/*": ["src/styles/*"],
+      "~icons/*": ["src/icons/*"]
+    }
+  },
+  "include": ["src", "astro.config.mjs"]
 }
