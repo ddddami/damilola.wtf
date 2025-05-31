@@ -5,16 +5,52 @@ import Footer from "../components/layout/Footer.astro";
 
 interface Props {
   title: string;
+  desc?: string;
+  keywords?: string;
+  metaImg?: string;
+  pubDate?: Date;
 }
-const { title } = Astro.props;
+
+let { title, desc, metaImg, keywords, pubDate = null } = Astro.props;
+if (!title) title = "Damilola";
+if (!desc)
+  desc =
+    "Learning and building software I'd want to use — fast, intuitive, and good.";
+if (!metaImg) metaImg = "/images/meta.webp";
+if (!keywords)
+  keywords =
+    "damilola, osunsanwo, ddddami, python, php, go, typescript, javascript, rust, software, engineer, developer, blog, projects, portfolio, web developer, software engineer, software developer";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+
+    <meta name="description" content={desc} />
+    <meta name="keywords" content={keywords} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://damilola.wtf" />
+    <meta property="og:site" content="https://damilola.wtf" />
+    <meta property="og:site_name" content="Damilola" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:image" content={metaImg} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://damilola.wtf" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={desc} />
+    <meta property="twitter:image" content={metaImg} />
+
+    {
+      !!pubDate ? (
+        <meta name="article:published_time" content={pubDate.toISOString()} />
+      ) : null
+    }
     <title>{title}</title>
   </head>
   <body>
