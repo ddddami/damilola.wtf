@@ -28,7 +28,7 @@
     "tags": ["go"]
   },
   {
-    "name": "TAEMS",
+    "name": "Taems",
     "description": "A one-stop all-in-one solution for everything high-school management related",
     "website_url": null,
     "github_url": "https://github.com/ddddami/taems",
@@ -39,7 +39,7 @@
 
   {
     "name": "Gitignore",
-    "description": "A cli tool to generate .gitignore templates written in go",
+    "description": "A cli tool for generating .gitignore templates written in go",
     "website_url": null,
     "github_url": "https://github.com/ddddami/gitignore",
     "image": "/test.jpg",

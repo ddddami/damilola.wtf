@@ -5,7 +5,6 @@ import Layout from "../layouts/Layout.astro";
 import ProfileCard from "../components/layout/ProfileCard.astro";
 import SimpleArticleListItem from "../components/items/SimpleArticleListItem.astro";
 import SimpleProjectListItem from "../components/items/SimpleProjectListItem.astro";
-import H2 from "../components/mdx/H2.astro";
 
 export type Project = CollectionEntry<"projects">["data"][number];
 const PAGE_SIZE = 6;
@@ -21,18 +20,18 @@ const projects: Project[] =
     <section id="about">
       <p>
         Hey there! I&apos;m Damilola – a software developer and sophomore
-        software engineering student, a sucker for software that
-        _just&nbsp;works_ and is beautifully simple. I constantly build and
-        break things (a lot), always learning and expanding my skills so I can
-        create seamless, high-performing software that feels intuitive and
-        reliable – the kind of software I believe people should experience and
-        that I want to use.
+        software engineering student, a sucker for beautifully simple software
+        that
+        <span class="italic">just&nbsp;works</span>. I constantly build and
+        break things (a lot), learn new things and expand my skill set so I can
+        create reliable, seamless &amp; high-performance software - the kind of
+        software I believe people should experience and that I want to use.
       </p>
     </section>
 
     <!-- {latest posts} -->
     <section class="mt-6" id="latest-posts">
-      <H2 class="text-3xl">Latest posts</H2>
+      <h2>Latest posts</h2>
 
       <div class="mt-5 space-y-5">
         {posts.map((post) => <SimpleArticleListItem {post} />)}
@@ -42,7 +41,7 @@ const projects: Project[] =
     <hr class="my-12" />
 
     <section id="projects">
-      <H2>Featured projects</H2>
+      <h2>Featured projects</h2>
 
       <div class="mt-5 space-y-5">
         {projects.map((project) => <SimpleProjectListItem {project} />)}

@@ -3,7 +3,6 @@ import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 import Layout from "~layouts/Layout.astro";
 import ProfileCard from "~components/layout/ProfileCard.astro";
-import H2 from "~components/mdx/H2.astro";
 
 import php from "~icons/php.svg";
 import typescript from "~icons/typescript.svg";
@@ -26,14 +25,14 @@ const tools: Tool[] = [
   {
     name: "PHP",
     description:
-      "Powerful, great for dynamic web apps, with no crazy requirements, I loathed it at first - because the syntax seemed weird at first and `PHP is dead` (it really isn't) I have now grown to love it and build web apps with it.",
+      "Good choice for dynamic web apps with no crazy requirements. I loathed it at first because the syntax seemed weird and everyone said `PHP is dead` (it really isn't). I have now grown to love & build web apps with it.",
     logo: php,
     color: "#4F5B93",
   },
   {
     name: "Typescript",
     description:
-      "JavaScript is the only sane way to build highly interactive web apps (or at least the only one I know of). If I’m going to spend a lot of time writing it, I at least want my IDE to say, ‘Hey, you messed up here,’ instead of leaving me guessing. Even if it doesn’t provide any benefits at runtime, I still appreciate the static checking.",
+      "JavaScript is the only sane way (I know of) for highly interactive web apps. If I'd be spending time writing it, I want my IDE to tell me 'Hey, you messed up here' instead of leaving me guessing. Even without runtime benefits, I appreciate the static checking.",
     logo: typescript,
     color: "#007ACC",
   },
@@ -47,44 +46,43 @@ const tools: Tool[] = [
   {
     name: "Python",
     description:
-      "My very first language, - clean, elegant, great for occassional scripting and building dynamic web apps quickly. I don't use it everyday anymore, but when I do, it feels like home.",
+      "My very first language - clean, elegant, great for scripting and building web apps quickly. I don't use it everyday anymore, but when I do, it feels like home.",
     logo: python,
     color: "#CBC3C33B",
   },
   {
     name: "Mysql",
     description:
-      "A solid and reliable relational database choice. I’ve used it for years in pretty much every project that needed some sort of structured data.",
+      "A solid and reliable relational database choice. I've used it for years in pretty much every project that needed structured data.",
     logo: mysql,
     color: "#00758F",
   },
   {
     name: "Neovim",
     description:
-      "I primarily use Neovim as my code editor. I was a bit skeptical at first — I thought people who used it just wanted to look superior or mysterious, but I value my productivity, and Neovim gives me just that. I can edit text at the speed of thought, without waiting every 5s for my very `powerful` IDE or even have to reach for a mouse.",
+      "I thought people who used it just wanted to look superior, but I value the productivity Neovim gives me. I can edit text at the speed of thought, without waiting for 5s for my `very powerful` IDE or reaching for a mouse.",
     logo: neovim,
     color: "#00B953",
   },
   {
     name: "Docker",
     description:
-      "Whether I am building or running apps, docker makes it easy to ensure a consistent environment and spin things up quickly without dependency headaches.",
+      "Whether building or running apps, Docker makes it easy to ensure consistent environments and spin things up quickly without dependency headaches.",
     logo: docker,
     color: "#2496ED",
   },
   {
     name: "Git",
     description:
-      "Everyone uses it, and for good reason. It’s a beautifully designed distributed version control system. I haven’t tried any others — never had a reason to.",
+      "Everyone uses it, and for good reason. It's a beautifully designed distributed version control system. Haven't tried others, never actually had a reason to.",
     logo: git,
     color: "#F05032",
   },
   {
     name: "Tailwind CSS",
     description:
-      "I love the utility-first approach to styling. It’s a nice way to quickly build responsive, modern UIs while hardly having to write any CSS.",
+      "I love the utility-first approach to styling. It's a nice way to quickly build responsive, modern UIs while hardly having to write any CSS.",
     logo: tailwindcss,
-    // color: "#06B6D4",
     color: "#38bdf8",
   },
 ];
@@ -100,7 +98,7 @@ const tools: Tool[] = [
       Sometimes I dabble in other tools and languages — out of curiosity,
       necessity, interest, or the occasional paycheck :) <br />
       Below are some of the tools I feel comfortable with, along with general experience
-      and some things I really want to try.
+      and some things I really want to try out.
     </p>
     <section class="mb-8" id="tools">
       <div class="mt-5 space-y-5">
@@ -131,7 +129,7 @@ const tools: Tool[] = [
       </div>
     </section>
     <section class="mb-8">
-      <H2>Things I&apos;m excited for</H2>
+      <h2>Things I&apos;m excited for</h2>
 
       <!-- I don't know why prettier-ignore is cutting off my text, but the white space (line-breaks) are visible in browsers and prettier thankfully incosistently adds whitespace to the list items -->
       <ul class="list-disc list-inside mt-5 space-y-3">
@@ -151,15 +149,15 @@ const tools: Tool[] = [
         </li>
 
         <li>
-          <a target="_blank" href="https://www.solidjs.com/">Solid.js</a> - I use
-          react a lot, but I like Solid.js's approach to reactiviy, and it's more
-          perfomant
+          <a target="_blank" href="https://www.solidjs.com/">Solid.js</a> – I use
+          React a lot, but I like Solid.js's approach to reactivity, and it's faster
+          and more efficient.
         </li>
       </ul>
     </section>
 
     <section class="mb-8">
-      <H2>Other things I&apos;ve used</H2>
+      <h2>Other things I&apos;ve used</h2>
       <ul class="list-disc list-inside mt-5 space-y-3">
         <li>
           <b>Laravel</b> - welps.. I have had to painfully write Laravel before.
@@ -177,7 +175,7 @@ const tools: Tool[] = [
     </section>
 
     <section class="mb-8">
-      <H2>CLI tools</H2>
+      <h2>CLI tools</h2>
       <ul class="list-disc list-inside mt-5 space-y-3">
         <li>
           <a target="_blank" href="https://github.com/tmux/tmux/">tmux</a> - since
@@ -189,7 +187,7 @@ const tools: Tool[] = [
         <li>
           <a target="_blank" href="https://github.com/jesseduffield/lazygit"
             >lazygit</a
-          > - For a seamless git workflow in my terminal
+          > - for a seamless git workflow in my terminal
           <ul class="list-disc list-inside ml-6 space-y-1.5">
             <li>
               <a target="_blank" href="https://github.com/dandavison/delta"
