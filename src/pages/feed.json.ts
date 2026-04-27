@@ -1,4 +1,5 @@
 import { getCollection } from "astro:content";
+import { getPostPath } from "../utils/content";
 
 export async function GET(context: { site: string }) {
   const site = context.site;
@@ -7,7 +8,7 @@ export async function GET(context: { site: string }) {
   const posts = blog.map((post) => ({
     id: post.id,
     title: post.data.title,
-    url: `${site}posts/${post.id}`,
+    url: `${site}posts/${getPostPath(post)}`,
     tags: post.data.tags,
     summary: post.data.description,
     content_text: post.body,

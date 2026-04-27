@@ -1,13 +1,16 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { getPostPath } from "../../utils/content";
 
 interface Props {
   post: CollectionEntry<"blog">;
 }
 
 const {
-  post: { data, id },
+  post,
 } = Astro.props;
+
+const { data } = post;
 ---
 
 <div class="flex gap-2.5">
@@ -15,5 +18,5 @@ const {
     {new Date(data.date).toLocaleDateString("en-GB")}
   </time>
 
-  <a href={"/posts/" + id} class="font-semibold">{data.title}</a>
+  <a href={"/posts/" + getPostPath(post)} class="font-semibold">{data.title}</a>
 </div>
