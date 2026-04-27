@@ -1,17 +1,17 @@
 ---
-import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import ProfileCard from "../components/layout/ProfileCard.astro";
 import SimpleArticleListItem from "../components/items/SimpleArticleListItem.astro";
 import SimpleProjectListItem from "../components/items/SimpleProjectListItem.astro";
+import { getProjectList, type Project } from "../utils/content";
 
-export type Project = CollectionEntry<"projects">["data"];
 const PAGE_SIZE = 6;
 const posts = (await getCollection("blog")).slice(0, PAGE_SIZE);
-const projects: Project[] = (await getCollection("projects"))
-  .map(({ data }) => data)
-  .slice(0, PAGE_SIZE);
+const projects: Project[] = getProjectList(await getCollection("projects")).slice(
+  0,
+  PAGE_SIZE,
+);
 ---
 
 <Layout title="Damilola Osunsanwo">

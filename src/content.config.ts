@@ -18,8 +18,10 @@ const blog = defineCollection({
 });
 
 const projects = defineCollection({
+	// Astro 4's types do not include the parser overload yet, but Astro 6 uses it.
+	// @ts-expect-error Astro 6 file() parser overload
 	loader: file("src/content/projects/projects.json", {
-		parser: (text) =>
+		parser: (text: string) =>
 			Object.fromEntries(
 				JSON.parse(text).map((project: { name: string }, index: number) => {
 					const id =

@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 import Layout from "~layouts/Layout.astro";
 import ProfileCard from "~components/layout/ProfileCard.astro";
@@ -111,10 +110,14 @@ const tools: Tool[] = [
                     class="p-1.5 mr-4 mt-4 aspect-square object-cover rounded w-10 h-10 flex items-center justify-center"
                     style={{ backgroundColor: tool.color }}
                   >
-                    <Image
-                      src={tool.logo}
+                    <img
+                      src={tool.logo.src}
+                      width={tool.logo.width}
+                      height={tool.logo.height}
                       alt={tool.name}
                       class="w-9 h-9 aspect-square"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div>

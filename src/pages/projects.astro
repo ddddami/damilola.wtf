@@ -3,11 +3,9 @@ import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import ProfileCard from "../components/layout/ProfileCard.astro";
 import SimpleProjectListItem from "../components/items/SimpleProjectListItem.astro";
-import type { Project } from "./index.astro";
+import { getProjectList, type Project } from "../utils/content";
 
-const projects: Project[] = (await getCollection("projects")).map(
-  ({ data }) => data,
-);
+const projects: Project[] = getProjectList(await getCollection("projects"));
 ---
 
 <Layout title="Projects">
