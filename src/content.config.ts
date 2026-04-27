@@ -18,8 +18,6 @@ const blog = defineCollection({
 });
 
 const projects = defineCollection({
-	// Astro 4's types do not include the parser overload yet, but Astro 6 uses it.
-	// @ts-expect-error Astro 6 file() parser overload
 	loader: file("src/content/projects/projects.json", {
 		parser: (text: string) =>
 			Object.fromEntries(
@@ -37,8 +35,8 @@ const projects = defineCollection({
 	schema: z.object({
 		name: z.string().regex(/^[A-Za-z0-9-.\s]+$/),
 		description: z.string(),
-		website_url: z.string().url().optional().nullable(),
-		github_url: z.string().url().optional().nullable(),
+		website_url: z.url().optional().nullable(),
+		github_url: z.url().optional().nullable(),
 		image: z.string().regex(/\.(png|jpg|jpeg|gif)$/),
 		tags: z.array(z.string()),
 		status: z.enum([
