@@ -7,7 +7,7 @@ export async function GET(context: { site: string }) {
   const posts = blog.map((post) => ({
     id: post.id,
     title: post.data.title,
-    url: `${site}posts/${post.slug}`,
+    url: `${site}posts/${post.id}`,
     tags: post.data.tags,
     summary: post.data.description,
     content_text: post.body,

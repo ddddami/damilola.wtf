@@ -6,11 +6,12 @@ import ProfileCard from "../components/layout/ProfileCard.astro";
 import SimpleArticleListItem from "../components/items/SimpleArticleListItem.astro";
 import SimpleProjectListItem from "../components/items/SimpleProjectListItem.astro";
 
-export type Project = CollectionEntry<"projects">["data"][number];
+export type Project = CollectionEntry<"projects">["data"];
 const PAGE_SIZE = 6;
 const posts = (await getCollection("blog")).slice(0, PAGE_SIZE);
-const projects: Project[] =
-  (await getCollection("projects"))?.[0]?.data.slice(0, PAGE_SIZE) ?? [];
+const projects: Project[] = (await getCollection("projects"))
+  .map(({ data }) => data)
+  .slice(0, PAGE_SIZE);
 ---
 
 <Layout title="Damilola Osunsanwo">

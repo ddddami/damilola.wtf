@@ -6,7 +6,7 @@ interface Props {
 }
 
 const {
-  post: { data, slug },
+  post: { data, id },
 } = Astro.props;
 ---
 
@@ -15,5 +15,5 @@ const {
     {new Date(data.date).toLocaleDateString("en-GB")}
   </time>
 
-  <a href={"/posts/" + slug} class="font-semibold">{data.title}</a>
+  <a href={"/posts/" + id} class="font-semibold">{data.title}</a>
 </div>
